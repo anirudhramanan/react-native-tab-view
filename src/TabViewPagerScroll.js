@@ -69,7 +69,7 @@ export default class TabViewPagerScroll<T: Route<*>> extends PureComponent<
       ) {
         global.requestAnimationFrame(() => this._scrollTo(amount));
       } else {
-        this._scrollTo(amount, false);
+        global.requestAnimationFrame(() => this._scrollTo(amount, false));
       }
     }
   }
