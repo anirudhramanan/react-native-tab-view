@@ -10,7 +10,6 @@ import {
   StyleProp,
   ViewStyle,
 } from 'react-native'
-import {NavigationTransitionSpec} from 'react-navigation';
 
 export type Key = { key: string }
 export type RouteBase = Key & { testID?: string }
@@ -53,13 +52,7 @@ export type TransitionProps = {
   progress: number
 }
 
-export type TransitionConfigurator = (
-  currentTransitionProps: TransitionProps,
-  nextTransitionProps: TransitionProps
-) => NavigationTransitionSpec
-
 export type PagerProps = {
-  configureTransition?: TransitionConfigurator
   animationEnabled?: boolean
   swipeEnabled?: boolean
   swipeDistanceThreshold?: number
@@ -120,7 +113,6 @@ export type GestureHandler = (event: GestureEvent, state: GestureState) => void
 export type TabViewPagerPanProps<
   T extends RouteBase = RouteBase
 > = SceneRendererProps<T> & {
-  configureTransition?: TransitionConfigurator
   animationEnabled?: boolean
   swipeEnabled?: boolean
   swipeDistanceThreshold?: number

@@ -1,6 +1,6 @@
 {
   "name": "reactnativetabview",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Tab view component for React Native",
   "main": "src/index.js",
   "files": [
@@ -69,7 +69,6 @@
     ]
   },
   "dependencies": {
-    "@types/react-navigation": "3.0.1",
     "prop-types": "^15.5.8"
   }
 }
